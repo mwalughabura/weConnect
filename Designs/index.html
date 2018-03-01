@@ -8,8 +8,6 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 	<title>WeConnect</title>
 </head>
 	<body>
@@ -19,40 +17,67 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     			<span class="navbar-toggler-icon"></span>
 			</button>
+			<ul class="navbar-nav mr-auto">
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#" title="News"><i class="fa fa-globe" style="width: 40px;"></i> <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" title="Profile"> <i class="fa fa-user" style="width: 40px;"></i></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" title="Messages"><i class="fa fa-envelope" style="width: 40px;"></i></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" title="Notifications"><i class="fa fa-bell" style="width: 40px;"></i></a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							More
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Activities</a>
-							<a class="dropdown-item" href="#">Settings</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Log out</a>
-						</div>
-					</li>
-				</ul>
+			</ul>
+
+			<div class="float-right">
 				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+					<input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="email">
+					<input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="password">
+					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Login</button>
 				</form>
 			</div>
 		</nav>
-		
+
+	<div class="container">
+		<div class="row float-right">
+			<!-- Sign up -->
+			<div class="col-md-4">
+				
+			</div>
+
+			<div class="col-md-10">
+				<h4 class="text-center">Sign Up</h2><br>
+				<!-- <h6 class="text-center">Join Our Community And Share Your Ideas</h4> -->
+				<form>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Email</label>
+						<input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputPassword4">Password</label>
+						<input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputAddress">Address</label>
+					<input type="text" class="form-control" id="inputAddress" placeholder="Kimathi Street">
+				</div>
+				<div class="form-group">
+					<label for="inputAddress2">Address 2</label>
+					<input type="text" class="form-control" id="inputAddress2" placeholder="Nation House">
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputCity">City</label>
+						<input type="text" class="form-control" id="inputCity">
+					</div>
+					<div class="form-group col-md-4">
+						<label for="inputState">State</label>
+						<select id="inputState" class="form-control">
+							<option selected>Nairobi</option>
+							<option>Mombasa</option>
+							<option>Kisumu</option>
+						</select>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Sign in</button>
+				</form>
+			</div>
+		</div>
+	</div>
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
