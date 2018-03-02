@@ -24,7 +24,7 @@ Please read [CONTRIBUTING.md](https://github.com/mwalughabura/weConnect) for det
 
 ## Authors
 
-* **Mwalugha Bura** - *Initial work* - [PurpleBooth](https://github.com/)
+* **Mwalugha Bura** - *Initial work* - [MwalughaBura](https://github.com/mwalughabura)
 
 ## Acknowledgments
 
