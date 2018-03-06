@@ -13,12 +13,13 @@ class MyTest(TestCase):
 	def test_create_user(self):
 
 		user = User(name, password)
-		assertTrue(len(self.name) > 1, "User created.") and assertTrue(len(self.password) > 1, "User created.")
+		assertTrue(len(self.name) > 1 and len(self.password) > 1, "User created.")
 
 	def test_login(self):
 		response = self.get('/app/models/login')
-		self.assertIn('Please login', response)
+		self.assertIn('Please login', response.users)
 
+	
 	def test_signout(self):
 		response = self.get('/app/models/logout')
 		self.assertIn('You are logged out.', response)
