@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_testing import TestCase
+from app.models import login
 
 class MyTest(TestCase):
 
@@ -16,8 +17,8 @@ class MyTest(TestCase):
 
 	def test_login(self):
 		response = self.get('/app/models/login')
-		self.assertIn('Please login' response)
+		self.assertIn('Please login', response)
 
 	def test_signout(self):
 		response = self.get('/app/models/logout')
-		self.assertIn('You are logged out.' response)
+		self.assertIn('You are logged out.', response)
