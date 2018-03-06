@@ -10,8 +10,8 @@ To check the site log in to [weConnect](https://mwalughabura.github.io/weConnect
 
 ### Prerequisites
 
-*Browser 
-*Internet
+* Browser 
+* Internet
 
 ## Built With
 
