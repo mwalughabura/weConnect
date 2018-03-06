@@ -23,3 +23,4 @@ def login():
 @app.route('/api/auth/reset-password', methods = ['POST'])
 def login():
 	return "Your password has been reset."
+
