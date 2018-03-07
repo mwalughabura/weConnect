@@ -1,10 +1,13 @@
 from flask import Flask
-from flask_testing import TestCase
 
-class MyTest(TestCase):
+app = Flask(__name__)
 
-	def create_app(self):
+from app import routes
 
-		app = Flask(__name__)
-		app.config['TESTING'] = True
-		return app
+class User(object):
+	"""docstring for User"""
+	def __init__(self, name, password):
+		self.name = name
+		self.password = password
+
+		return "User created."
