@@ -22,7 +22,3 @@ class User():
 				password = self.password_hash(password)
 				users[username] = [email, password]
 		return "User has been successfully created."
-
-
-	def verify_password(self, password):
-		return check_password_hash(self.password_hash, password)
