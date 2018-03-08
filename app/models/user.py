@@ -59,3 +59,9 @@ class User():
 			return "Check your fields."
 		return "Check your fields."
 
+
+	def user_logout(self):
+		pass
+
+	def reset_password(self):
+		pass

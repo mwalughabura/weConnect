@@ -9,4 +9,5 @@ class Business():
 	def register_business(self, name, location, biz_type, description):
 		if name not in businesses:
 			businesses[name] = [location, biz_type, description]
-		return "Business has been successfully created."
+			return "Business has been successfully created."
+		return "The name has already been taken."

@@ -9,7 +9,7 @@ class UserModelTestCase(unittest.TestCase):
 		self.user = User()
 
 	def tearDown(self):
-		pass
+		self.user = None
 
 	def test_create_user(self):
 		response = self.user.create_user("john", "john@gmail.com", "randomname", "randomname")
@@ -23,3 +23,11 @@ class UserModelTestCase(unittest.TestCase):
 	def test_user_login(self):
 		ul = self.user.user_login("john", "randomname")
 		self.assertEqual(ul, "Successfully logged in.")
+
+	def test_user_logout(self):
+		ul = self.user.user_logout("john", "randomname")
+		self.assertEqual(ul, "You have been logged out.")
+
+	def test_reset_password(self):
+		ul = self.user.reset_password("john", "randomname")
+		self.assertEqual(ul, "You have reset your password.")
