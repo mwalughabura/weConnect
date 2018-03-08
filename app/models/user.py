@@ -2,7 +2,7 @@ import hashlib, uuid
 import re
 
 
-users = {}
+users = []
 
 class User():
 	logs = []
