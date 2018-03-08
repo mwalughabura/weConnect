@@ -47,6 +47,7 @@ class User():
 			in_db = self.username_in_db(username_or_email)
 			if in_db == "Hey":
 				if users[username_or_email][1] == password:
+					users[username_or_email].append(True)
 					return "Successfully logged in."
 			return "Check your fields."
 		elif checkEmailorName == "It is a valid email.": 
@@ -55,13 +56,19 @@ class User():
 				for i in user:
 					if email in users[i]:
 						if users[i][1] == password:
+							users[username_or_email].append(True)
 							return "Successfully logged in."
 			return "Check your fields."
 		return "Check your fields."
 
 
-	def user_logout(self):
-		pass
-
+	def user_logout(self, username):
+		if username in users:
+			if users[username][2] == True:
+				users[username][2] = False
+				return "You are now logged out"
+			return "You were not logged in."
+		return "You are not in the database"
+  
 	def reset_password(self):
 		pass
