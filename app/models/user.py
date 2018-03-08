@@ -22,3 +22,6 @@ class User():
 				password = self.password_hash(password)
 				users[username] = [email, password]
 		return "User has been successfully created."
+
+	def user_login(self):
+		pass
