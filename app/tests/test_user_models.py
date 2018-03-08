@@ -8,6 +8,9 @@ class UserModelTestCase(unittest.TestCase):
 	def setUp(self):
 		self.user = User()
 
+	def tearDown(self):
+		pass
+
 	def test_create_user(self):
 		response = self.user.create_user("john", "john@gmail.com", "randomname", "randomname")
 		self.assertEqual(response, 'User has been successfully created.')

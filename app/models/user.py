@@ -23,9 +23,6 @@ class User():
 			return "It is a valid email."
 		return "It is a username."
 
-	def password_match(self, password):
-		pass
-
 	def username_in_db(self, username):
 		if username in users:
 			return "Hey"
@@ -61,3 +58,4 @@ class User():
 							return "Successfully logged in."
 			return "Check your fields."
 		return "Check your fields."
+
