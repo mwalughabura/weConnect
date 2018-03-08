@@ -1,10 +1,12 @@
-from flask import Flask
-from flask_testing import TestCase
+dic = {'mwalugha': ['mwalughabura@gmail.com', 'password'], 'hamisi': ['hamisibura@gmail.com', 'password']}
+lis = ['mwalughabura@gmail.com', 'password']
 
-class MyTest(TestCase):
+def email_in_db(email):
+	for i in dic:
+		if email in dic[i]:
+			return "Hey"
+	return "Ooops"
 
-	def test_create_user(self):
-
-		user = User(name, password)
-		assertTrue(len(self.name) > 1, "User created.")
-		assertTrue(len(self.password) > 1, "User created.")
+print(email_in_db('mwalughabura@gmail.com'))
+print ("on to the next one.")
+print(email_in_db('hamisibura@gmail.com'))
