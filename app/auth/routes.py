@@ -1,7 +1,9 @@
-from flask import Blueprint, jsonify, request
+from flask import Flask, Blueprint, jsonify, request
 from ..models.user import users
 
 mod = Blueprint('auth', __name__)
+
+users = [{"username": "mwalugha", "password": "mwalugha", "email" : "mwalughabura@gmai.com"}]
 
 # this is just for testing
 @mod.route('/test', methods=['GET'])
@@ -19,9 +21,11 @@ def logout():
 
 @mod.route('/register', methods=['POST'])
 def register():
-	username = request.json['username']
-	return jsonify({username})
-	# appended = {"username": "mwalugha"}
 
-	# users.append(appended)
-	# return jsonify(appended)
+	user = {}
+	user["username"] = "mwalugha"
+	user["email"] = "mwalugha"
+	user["password"] = "mwalugha"
+
+	users.append(user)
+	return jsonify(users)
