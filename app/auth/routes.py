@@ -3,22 +3,33 @@ from ..models.user import users
 
 mod = Blueprint('auth', __name__)
 
-users = [{"username": "mwalugha", "password": "mwalugha", "email" : "mwalughabura@gmai.com"}]
-
-# this is just for testing
-@mod.route('/test', methods=['GET'])
-def test():
-	return jsonify({"key": "value"})
+users = [{"username": "mwalugha", "password": "mwalugha", "email" : "mwalughabura@gmai.com", "logged_in" : False}]
+logs = []
 
 
+# log in endpoints
 @mod.route('/login', methods=['POST'])
 def login():
-	return "Yes you have logged in."
+	login = {}
+	login["username_or_email"] = "mwalugha"
+	login["password"] = "mwalugha"
+	login["logged_in"] = True
 
+	logs.append(login)
+	return jsonify(logs)
+
+# log out endpoints
 @mod.route('/logout', methods=['POST'])
 def logout():
-	return "Yes you have been logged out."
+	logout = {}
+	logout["username_or_email"] = "mwalugha"
+	logout["logged_in"] = False
 
+	logs.append(logout)
+	return jsonify(logs)
+
+
+# register endpoints
 @mod.route('/register', methods=['POST'])
 def register():
 
