@@ -38,8 +38,9 @@ class User():
 		if username not in users:
 			if password == confirm_password:
 				passwordHashed = self.password_hash(password)
-				users[username] = [email, password, passwordHashed]
-		return "User has been successfully created."
+				users[username] = [username, email, password, passwordHashed]
+			return "User has been successfully created."
+		return "User exists."
 
 	def user_login(self, username_or_email, password):
 		checkEmailorName = self.check_username_or_email(username_or_email)
